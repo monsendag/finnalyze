@@ -15,7 +15,7 @@ app.get('/analyze', function (req, res) {
   }
 
   finnalyze
-    .getCsv(address)
+    .getCsv(url)
     .then(csv => {
       res.header("Content-Type", 'text/csv');
       res.send(csv);
