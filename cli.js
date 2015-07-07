@@ -1,17 +1,24 @@
 #!/usr/bin/env babel-node
 
-import scraper from './lib/scraper';
+import finnalyze from './lib/finnalyze';
 import winston from 'winston';
-
-winston.level = 'debug';
-
+import fs from 'fs';
 
 const address = process.argv[2];
 
-scraper
-  .getAll(address)
-  .then(data => {
-    console.dir(data);
-  }, err => {
-    console.error(err);
-  });
+
+finnalyze
+  .getCsv(address)
+  .then(csv => {
+    fs.writeFile('data.csv', csv);
+    console.log('done');
+  }, err => console.error(err));
+
+
+  //
+  // finnalyze
+  //   .getAll(address)
+  //   .then(json => {
+  //     fs.writeFile('data.json', JSON.stringify(json));
+  //     console.log('done');
+  //   }, err => console.error(err));
