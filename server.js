@@ -1,5 +1,8 @@
 import express from 'express';
 import finnalyze from './lib/finnalyze';
+import winston from 'winston';
+
+  winston.level = 'debug';
 
 var app = express();
 
@@ -25,6 +28,10 @@ app.get('/analyze', function (req, res) {
     });
 
 });
+
+app.get('/progress', function(req, res) {
+  return finnalyze.progress;
+})
 
 var server = app.listen(app.get('port'), function () {
 
