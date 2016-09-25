@@ -3,6 +3,9 @@
   "version": "1.2.0",
   "description": "simplify comparisons of online ads",
   "main": "server.js",
+  "engines": {
+    "node": "6.5.0"
+  },
   "dependencies": {
     "babel-cli": "^6.14.0",
     "babel-plugin-transform-async-to-generator": "^6.8.0",
