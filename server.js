@@ -8,21 +8,23 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static('public'));
 app.use(require('express-promise')());
 
-app.get('/analyze', function (req, res) {
+app.get('/analyze', async function (req, res) {
   const url = req.query.url;
   if(!url) {
     throw new Error('Invalid url');
   }
 
-  finnalyze
-    .getCsv(url)
-    .then(csv => {
-      res.header("Content-Type", 'text/csv');
-      res.send(csv);
-    }, err => {
-      res.status(500);
-      res.render('error', { error: err });
-    });
+  try {
+    const csv = await orbweaver.getCsv(url);
+    res.header("Content-Type", 'text/csv');
+    res.send(csv);
+  }
+  catch(error) {
+    console.error('Error!');
+    console.error(error);
+    res.status(500);
+    res.render('error', { error });
+  }
 
 });
 

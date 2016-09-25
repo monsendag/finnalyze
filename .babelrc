@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "node6"
+  ],
+  "ignore": [
+    "**/gen-nodejs/*"
+  ],
+  "plugins": [
+    "transform-async-to-generator"
+  ]
+}
