@@ -1,5 +1,5 @@
 {
-  "name": "finnalyze",
+  "name": "orbweaver",
   "version": "1.2.0",
   "description": "simplify comparisons of online ads",
   "main": "server.js",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/monsendag/finnalyze.git"
+    "url": "git+https://github.com/monsendag/orbweaver.git"
   },
   "keywords": [
     "scraper",
@@ -34,7 +34,7 @@
   "author": "monsendag",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/monsendag/finnalyze/issues"
+    "url": "https://github.com/monsendag/orbweaver/issues"
   },
-  "homepage": "https://github.com/monsendag/finnalyze#readme"
+  "homepage": "https://github.com/monsendag/orbweaver#readme"
 }

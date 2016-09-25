@@ -1,6 +1,6 @@
 #!/usr/bin/env babel-node
 
-import finnalyze from './lib/finnalyze';
+import orbweaver from './lib/orbweaver';
 import winston from 'winston';
 import fs from 'fs';
 

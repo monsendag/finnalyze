@@ -1,5 +1,5 @@
 import express from 'express';
-import finnalyze from './lib/finnalyze';
+import orbweaver from './lib/orbweaver';
 
 var app = express();
 
@@ -31,5 +31,5 @@ var server = app.listen(app.get('port'), function () {
   var host = server.address().address;
   var port = server.address().port;
 
-  console.log('finnalyze listening at http://%s:%s', host, port);
+  console.log('orbweaver listening at http://%s:%s', host, port);
 });
